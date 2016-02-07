@@ -7,7 +7,7 @@ var yamljs = require('yamljs');
 
 
 gulp.task('jade', () => {
-  
+
   var file = yamljs.load('./src/dictionary.yml');
 
   var dictionary = Object.keys(file).map(key => {
