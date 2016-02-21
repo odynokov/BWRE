@@ -18,21 +18,21 @@ gulp.task('jade', () => {
     .src('./src/index.jade')
     .pipe(data((file) => ({dictionary})))
     .pipe(jade())
-    .pipe(gulp.dest('./build/'))
+    .pipe(gulp.dest('./public/'))
 });
 
 gulp.task('css', () => {
   gulp
     .src('./src/styles.css')
     .pipe(uglifycss())
-    .pipe(gulp.dest('./build/'))
+    .pipe(gulp.dest('./public/'))
 });
 
 gulp.task('js', () => {
   gulp
     .src('./src/scripts.js')
     .pipe(uglifyjs())
-    .pipe(gulp.dest('./build/'))
+    .pipe(gulp.dest('./public/'))
 });
 
 gulp.task('default', ['jade', 'css', 'js']);
